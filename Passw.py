@@ -1,11 +1,11 @@
-import random
+import secrets
 import string
 import os
 from datetime import datetime
 
 def generer_mot_de_passe(longueur=16):
     caracteres = string.ascii_letters + string.digits + string.punctuation
-    mot_de_passe = ''.join(random.choices(caracteres, k=longueur))
+    mot_de_passe = ''.join(secrets.choice(caracteres) for _ in range(longueur))
     return mot_de_passe
 
 def enregistrer_mot_de_passe(mot_de_passe, nom_service="mot_de_passe"):
@@ -24,5 +24,6 @@ def enregistrer_mot_de_passe(mot_de_passe, nom_service="mot_de_passe"):
     print(f"Mot de passe enregistré dans : {nom_fichier}")
 
 # --- Exemple d'utilisation ---
-mot_de_passe = generer_mot_de_passe(20)
-enregistrer_mot_de_passe(mot_de_passe, nom_service="CompteEmail")
+if __name__ == "__main__":
+    mot_de_passe = generer_mot_de_passe(20)
+    enregistrer_mot_de_passe(mot_de_passe, nom_service="CompteEmail")
