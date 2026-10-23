@@ -5,7 +5,7 @@ from urllib.parse import urlparse, parse_qs
 from Passw import generer_mot_de_passe
 
 PAGE = """<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>Générateur de mot de passe</title>
+<html lang="fr"><head><meta charset="utf-8"><title>Générateur de mot de passe</title><link rel="icon" href="data:,">
 <style>
 body{{font-family:system-ui,sans-serif;background:#f4f5f7;display:flex;justify-content:center;padding-top:80px}}
 .card{{background:#fff;padding:32px;border-radius:12px;box-shadow:0 2px 12px #0001;width:420px}}
